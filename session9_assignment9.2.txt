@@ -1,0 +1,49 @@
+Write a program to build any collection containing duplicates. Create its copy with all duplicates
+removed.
+
+
+package session9;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+
+public class duplicates
+{
+public static void main(String[] args) 
+{
+ArrayList<String> al=new ArrayList<String>();
+
+al.add("Rahul");
+al.add("Tinu");
+al.add("Theresa");
+al.add("Fawad");
+al.add("Nilesh");
+al.add("Theresa");
+al.add("Sanjay");
+al.add("Tena");
+al.add("Tena");
+al.add("Fawad");
+al.add("Arun");
+al.add("Erin");
+
+System.out.println("---Printing from ArrayList---");
+
+for (String numbers : al) 
+{
+	System.out.println(numbers);	
+}
+
+System.out.println("Number of elements in ArrayList:" +al.size());
+
+Set<String> s=new HashSet<String>(al);
+System.out.println("-------------Creating duplicate copy of ArryList using Set----------------------");
+System.out.println("---Printing from set---");
+for (String num : s) 
+{
+	System.out.println(num);
+	
+}
+System.out.println("Number of elements in Set: "+s.size());
+}
+}
